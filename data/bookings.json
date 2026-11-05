@@ -1,0 +1,29 @@
+[
+  {
+    "id": "R-AMB-413036-734",
+    "callerName": "Sunil Kumar",
+    "phone": "+91 91220 10899",
+    "pickupAddress": "Road No 4, Rajendra Nagar, Patna",
+    "dropHospitalName": "PMCH Super Emergency Wing",
+    "ambulanceType": "ALS — Robotic ICU on Wheels",
+    "ambulanceCategory": "Advanced Life Support",
+    "patientCondition": "Cardiac Chest Pain",
+    "status": "Dispatched (En Route)",
+    "etaMinutes": 11,
+    "pickupOtp": 4764,
+    "assignedDriver": {
+      "name": "Rajesh Kumar Yadav",
+      "phone": "+91 91220 10811",
+      "emtBadge": "BR-EMT-402",
+      "vehicleNumber": "BR 01 PB 5257",
+      "model": "Force Traveller 3350 High Roof ICU"
+    },
+    "robotTelematics": {
+      "automatedCprReady": true,
+      "oxygenFlowLitres": 12,
+      "vitalsStreamingActive": true,
+      "trafficCorridorClearance": "Patna Smart City Green Light Pre-Emption"
+    },
+    "createdAt": "2026-11-05T18:13:33.036Z"
+  }
+]

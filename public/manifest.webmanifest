@@ -1,0 +1,37 @@
+{
+  "name": "Robot Ambulance Bihar — 24/7 Patna Emergency Service",
+  "short_name": "RobotAmbulance",
+  "description": "24/7 Smart & Robot-Assisted Emergency Ambulance Services in Patna & Bihar",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#d32f2f",
+  "icons": [
+    {
+      "src": "/icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["medical", "health", "emergency"],
+  "shortcuts": [
+    {
+      "name": "Book Ambulance",
+      "url": "/#book",
+      "description": "Instant Patna Ambulance Booking"
+    },
+    {
+      "name": "Emergency Call",
+      "url": "tel:+916122991088",
+      "description": "Call 24/7 Helpline"
+    }
+  ]
+}

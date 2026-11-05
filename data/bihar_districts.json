@@ -1,0 +1,23 @@
+[
+  { "district": "Patna (Local City)", "distanceKm": 15, "transitHours": "0.4 hrs", "route": "Internal Ring Road / Marine Drive", "blsFare": 1849, "alsFare": 4749 },
+  { "district": "Vaishali / Hajipur", "distanceKm": 25, "transitHours": "0.6 hrs", "route": "Via Gandhi Setu / JP Setu", "blsFare": 2249, "alsFare": 5499 },
+  { "district": "Arrah (Bhojpur)", "distanceKm": 52, "transitHours": "1.2 hrs", "route": "Via Koilwar Bridge / NH-922", "blsFare": 3319, "alsFare": 7524 },
+  { "district": "Chapra (Saran)", "distanceKm": 56, "transitHours": "1.3 hrs", "route": "Via Digha-Sonpur Bridge / NH-31", "blsFare": 3459, "alsFare": 7824 },
+  { "district": "Nalanda / Bihar Sharif", "distanceKm": 72, "transitHours": "1.8 hrs", "route": "Via Bakhtiyarpur Expressway / NH-20", "blsFare": 4019, "alsFare": 9024 },
+  { "district": "Muzaffarpur", "distanceKm": 78, "transitHours": "1.9 hrs", "route": "Via JP Setu & NH-22 Expressway", "blsFare": 4229, "alsFare": 9474 },
+  { "district": "Jehanabad", "distanceKm": 50, "transitHours": "1.2 hrs", "route": "Via Patna-Gaya NH-83", "blsFare": 3249, "alsFare": 7374 },
+  { "district": "Gaya / Bodh Gaya", "distanceKm": 105, "transitHours": "2.4 hrs", "route": "Via 4-Lane NH-83 Expressway", "blsFare": 5174, "alsFare": 11499 },
+  { "district": "Samastipur", "distanceKm": 88, "transitHours": "2.1 hrs", "route": "Via Tajpur / NH-28", "blsFare": 4579, "alsFare": 10224 },
+  { "district": "Begusarai", "distanceKm": 125, "transitHours": "2.8 hrs", "route": "Via Mokama Bridge / NH-31", "blsFare": 5874, "alsFare": 12999 },
+  { "district": "Darbhanga", "distanceKm": 138, "transitHours": "3.1 hrs", "route": "Via Muzaffarpur-Darbhanga NH-27", "blsFare": 6329, "alsFare": 13974 },
+  { "district": "Motihari (East Champaran)", "distanceKm": 152, "transitHours": "3.4 hrs", "route": "Via NH-27 East-West Corridor", "blsFare": 6819, "alsFare": 15024 },
+  { "district": "Sasaram (Rohtas)", "distanceKm": 156, "transitHours": "3.5 hrs", "route": "Via Bikramganj / GT Road", "blsFare": 6959, "alsFare": 15324 },
+  { "district": "Munger", "distanceKm": 178, "transitHours": "4.0 hrs", "route": "Via Munger Rail-cum-Road Bridge", "blsFare": 7729, "alsFare": 16974 },
+  { "district": "Bhagalpur", "distanceKm": 235, "transitHours": "5.2 hrs", "route": "Via NH-80 / Sultanganj Highway", "blsFare": 9724, "alsFare": 21249 },
+  { "district": "Purnia", "distanceKm": 310, "transitHours": "6.5 hrs", "route": "Via Kursela Bridge / NH-31", "blsFare": 12349, "alsFare": 26874 },
+  { "district": "Katihar", "distanceKm": 325, "transitHours": "6.8 hrs", "route": "Via NH-31", "blsFare": 12874, "alsFare": 27999 },
+  { "district": "Bettiah (West Champaran)", "distanceKm": 195, "transitHours": "4.4 hrs", "route": "Via Motihari / NH-727", "blsFare": 8324, "alsFare": 18249 },
+  { "district": "Siwan", "distanceKm": 130, "transitHours": "3.0 hrs", "route": "Via Chapra / NH-531", "blsFare": 6049, "alsFare": 13374 },
+  { "district": "Saharsa", "distanceKm": 220, "transitHours": "5.0 hrs", "route": "Via Mansi / NH-107", "blsFare": 9199, "alsFare": 20124 },
+  { "district": "Madhubani", "distanceKm": 168, "transitHours": "3.8 hrs", "route": "Via Sakri / NH-527B", "blsFare": 7379, "alsFare": 16224 }
+]

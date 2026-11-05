@@ -1,0 +1,183 @@
+[
+  {
+    "id": "BLS_EECO",
+    "name": "BLS — Smart Eeco",
+    "vehicle": "Maruti Suzuki Eeco Ambulance",
+    "category": "Basic Life Support",
+    "badge": "City Rapid Responder",
+    "icon": "🚑",
+    "basePrice": 1499,
+    "baseKm": 5,
+    "perKmPrice": 35,
+    "etaMinutes": 10,
+    "equipments": [
+      "Jumbo Medical Oxygen Cylinder (D-Type)",
+      "Auto-Loading Stretcher & Spine Board",
+      "Digital BP & Pulse Oximeter",
+      "Complete First Aid & Trauma Splint Kit",
+      "Suction Apparatus & Nebulizer"
+    ],
+    "robotFeatures": [
+      "IoT GPS Telematics & AI Traffic Dispatch",
+      "Digital Oxygen Consumption Meter",
+      "Automated SOS Tele-Alert to Destination ER"
+    ],
+    "staff": ["Certified Emergency Medical Technician (EMT)", "Trained Emergency Pilot"],
+    "suitableFor": "Stable patient transfers, regular dialysis visits, non-critical trauma, fracture transport"
+  },
+  {
+    "id": "BLS_TRAVELLER",
+    "name": "BLS — Force Traveller",
+    "vehicle": "Force Traveller T1 Wide Body",
+    "category": "Basic Life Support",
+    "badge": "Spacious & Intercity",
+    "icon": "🚐",
+    "basePrice": 2199,
+    "baseKm": 5,
+    "perKmPrice": 45,
+    "etaMinutes": 12,
+    "equipments": [
+      "Twin High-Pressure Oxygen Regulators",
+      "Hydraulic Shock-Absorbing Patient Bed",
+      "Foldable Wheelchair & Scoop Stretcher",
+      "Air-Conditioned Patient Cabin",
+      "Dedicated 3 Attendant Seating Area"
+    ],
+    "robotFeatures": [
+      "Real-time Vehicle Health & Speed Telemetry",
+      "AI Green-Corridor Route Navigation",
+      "Smart Cabin Temp & Humidity Stabilizer"
+    ],
+    "staff": ["Paramedic EMT", "Emergency Pilot"],
+    "suitableFor": "Inter-district patient transfers across Bihar, patients with multiple family attendants"
+  },
+  {
+    "id": "ALS_ROBOTIC",
+    "name": "ALS — Robotic ICU on Wheels",
+    "vehicle": "Force Traveller 3350 High Roof ICU",
+    "category": "Advanced Life Support",
+    "badge": "Robot CPR & Ventilator",
+    "icon": "🫁",
+    "basePrice": 3999,
+    "baseKm": 5,
+    "perKmPrice": 75,
+    "etaMinutes": 12,
+    "equipments": [
+      "German Draeger Oxylog Transport Ventilator",
+      "Automated Robot Mechanical Chest Compressor (Lucas 3 type)",
+      "5-Para Cardiac Monitor (ECG, SpO2, NIBP, Temp, EtCO2)",
+      "Biphasic Defibrillator with External Pacing",
+      "Dual Syringe Micro-Infusion Pumps",
+      "Electric Suction Unit with Catheter Assortment"
+    ],
+    "robotFeatures": [
+      "Robotic Continuous CPR (102 compressions/min without fatigue)",
+      "Live 5G/4G Tele-ICU Streaming to AIIMS/PMCH Trauma Team",
+      "AI Waveform Analysis for Arrhythmia & Cardiac Arrest"
+    ],
+    "staff": ["Critical Care Certified Nurse / ICU Paramedic", "Emergency Medical Technician", "Specialized Pilot"],
+    "suitableFor": "Ventilator-dependent patients, acute respiratory distress, severe polytrauma, stroke transfers"
+  },
+  {
+    "id": "ACLS_CARDIAC",
+    "name": "ACLS — Cardiac Critical Unit",
+    "vehicle": "Custom Mercedes/Force Intensive Cardiac Care",
+    "category": "Advanced Cardiac Life Support",
+    "badge": "Cardiac Emergency Gold Standard",
+    "icon": "❤️",
+    "basePrice": 4999,
+    "baseKm": 5,
+    "perKmPrice": 85,
+    "etaMinutes": 12,
+    "equipments": [
+      "12-Lead Wireless Tele-ECG Diagnostic System",
+      "Biphasic Defibrillator & Cardiac Pacemaker",
+      "Full Cardiac Emergency Pharmacopeia (Atropine, Adrenaline, Thrombolytics)",
+      "Arterial Blood Gas (i-STAT) Portable Analyzer",
+      "Automated External Chest Compression System",
+      "Emergency Endotracheal Intubation Video Laryngoscope"
+    ],
+    "robotFeatures": [
+      "Automated STEMI Detection & Pre-Hospital Cath Lab Activation",
+      "Cloud Tele-Cardiology Link with Receiving Senior Cardiologist",
+      "Smart Infusion Dosing Computer"
+    ],
+    "staff": ["Critical Care Medical Officer / Doctor", "Cardiac ICU Nurse", "Emergency Pilot"],
+    "suitableFor": "Acute myocardial infarction (Heart Attack), cardiogenic shock, post-angioplasty emergencies"
+  },
+  {
+    "id": "NICU_BABY",
+    "name": "NICU / PICU — Neonatal Intensive Care",
+    "vehicle": "Dedicated Pediatric Transport Cruiser",
+    "category": "Neonatal & Pediatric Care",
+    "badge": "Specialized Infant Unit",
+    "icon": "👶",
+    "basePrice": 4499,
+    "baseKm": 5,
+    "perKmPrice": 80,
+    "etaMinutes": 15,
+    "equipments": [
+      "Dräger Isolette Transport Infant Incubator",
+      "Servo-Controlled Radiant Infant Warmer",
+      "SLE 1000 High-Frequency Infant Micro-Ventilator",
+      "Phototherapy Unit for Hyperbilirubinemia",
+      "Micro-Delivery Precision Syringe Infusion Pumps",
+      "Neonatal Pulse Oximetry & Resuscitation Kit"
+    ],
+    "robotFeatures": [
+      "Smart Skin-Temperature Feedback Regulator",
+      "Micro-Vibration Damping Patient Cradle",
+      "Live Tele-Pediatrician Monitoring"
+    ],
+    "staff": ["Neonatal Intensive Care Trained Nurse", "Pediatric Paramedic", "Emergency Pilot"],
+    "suitableFor": "Premature newborns, low birth weight infants, pediatric cardiac conditions, critical transfers"
+  },
+  {
+    "id": "MORTUARY_FREEZER",
+    "name": "Mortuary Van — Antim Yatra",
+    "vehicle": "Force Traveller / Bolero Shifting Van",
+    "category": "Dead Body Shifting",
+    "badge": "Dignified Cold-Box Transport",
+    "icon": "🕊️",
+    "basePrice": 2499,
+    "baseKm": 5,
+    "perKmPrice": 40,
+    "etaMinutes": 20,
+    "equipments": [
+      "Heavy Stainless Steel Mortuary Freezer Box (-5°C to 4°C)",
+      "Continuous Inverter Battery Backup (12+ Hours)",
+      "Dignified Floral Drape & Antim Sanskar Setup",
+      "Sanitized Body Bags & Shifting Stretcher"
+    ],
+    "robotFeatures": [
+      "Digital Temperature Tracking with Remote Cabin Alert",
+      "GPS Intercity Fleet Route Monitoring"
+    ],
+    "staff": ["2 Trained Sanitized Shifting Attendants", "Driver"],
+    "suitableFor": "Dignified body transfer from hospital to home, inter-district transfers across Bihar, cremation grounds"
+  },
+  {
+    "id": "AIR_AMBULANCE",
+    "name": "Air Ambulance — Aero-Medical Jet",
+    "vehicle": "Super King Air B200 / Beechcraft / Learjet",
+    "category": "Air Medical Transfer",
+    "badge": "Patna to Delhi / Pan-India",
+    "icon": "🚁",
+    "basePrice": 425000,
+    "baseKm": 1000,
+    "perKmPrice": 350,
+    "etaMinutes": 90,
+    "equipments": [
+      "FAA & DGCA Certified Airborne Flying ICU",
+      "High-Altitude Ventilator & Medical Oxygen Cascade",
+      "Aero-Medical Defibrillator & Multipara Monitors",
+      "Pressurized Cabin for Critical Hemodynamic Stability"
+    ],
+    "robotFeatures": [
+      "Satellite In-Flight Tele-ICU Connection",
+      "Tarmac-to-Tarmac Coordinated Bedside Transfer (Patna JPNI Airport to Delhi IGI)"
+    ],
+    "staff": ["Senior Aero-Medical Flight Physician", "Flight Critical Care Specialist", "Aviation Crew"],
+    "suitableFor": "Rapid organ transfers, extreme critical cases transferred from Patna to AIIMS Delhi, Medanta Gurgaon, Apollo"
+  }
+]

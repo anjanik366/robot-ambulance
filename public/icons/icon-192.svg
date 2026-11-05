@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <linearGradient id="bgRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d32f2f" />
+      <stop offset="100%" stop-color="#b71c1c" />
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" rx="42" fill="url(#bgRed)" />
+  <!-- Ambulance Body -->
+  <path d="M40 76 L112 76 L136 100 L152 100 C156.4 100 160 103.6 160 108 L160 136 C160 140.4 156.4 144 152 144 L144 144 C144 155 135 164 124 164 C113 164 104 155 104 144 L80 144 C80 155 71 164 60 164 C49 164 40 155 40 144 L36 144 C33.8 144 32 142.2 32 140 L32 84 C32 79.6 35.6 76 40 76 Z" fill="#ffffff" />
+  <!-- Windshield -->
+  <path d="M116 84 L132 100 L116 100 Z" fill="#0284c7" />
+  <!-- Wheels -->
+  <circle cx="60" cy="144" r="14" fill="#1f2937" />
+  <circle cx="60" cy="144" r="6" fill="#9ca3af" />
+  <circle cx="124" cy="144" r="14" fill="#1f2937" />
+  <circle cx="124" cy="144" r="6" fill="#9ca3af" />
+  <!-- Red Cross -->
+  <rect x="68" y="94" width="20" height="6" rx="2" fill="#d32f2f" />
+  <rect x="75" y="87" width="6" height="20" rx="2" fill="#d32f2f" />
+  <!-- Emergency Siren -->
+  <polygon points="76,64 80,56 84,64" fill="#38bdf8" />
+  <circle cx="80" cy="68" r="6" fill="#38bdf8" />
+</svg>

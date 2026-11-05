@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>24/7 Robot Ambulance Service in Patna & Bihar | SaveLife Partner</title>
+
+  <!-- PWA & Mobile Meta Tags -->
+  <meta name="theme-color" content="#d32f2f" />
+  <meta name="description" content="24/7 GPS-tracked smart & robot-assisted emergency ambulance service in Patna and all 38 districts of Bihar. Robotic CPR, ICU on wheels, ventilator & trained paramedics." />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <!-- Icons & Manifest -->
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="/icons/icon-192.svg" />
+  <link rel="apple-touch-icon" href="/icons/icon-192.svg" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <!-- 1. Top Emergency Helpline Ticker Bar -->
+  <aside class="emergency-topbar">
+    <div class="topbar-container">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <span class="siren-dot"></span>
+        <span>24/7 Emergency Ambulance · Patna & Bihar</span>
+        <span style="opacity: 0.5;">|</span>
+        <a href="tel:+916122991088" class="helpline-link">
+          <span>📞</span>
+          <span>+91 612 299 1088</span>
+        </a>
+        <span style="opacity: 0.5;">/</span>
+        <a href="tel:+919122010808" class="helpline-link">
+          <span>+91 91220 10808</span>
+        </a>
+      </div>
+
+      <div class="topbar-actions">
+        <a href="https://wa.me/919122010808?text=Emergency%20Ambulance%20Needed%20in%20Patna" target="_blank" class="whatsapp-link">
+          <span>💬</span>
+          <span>WhatsApp Booking</span>
+        </a>
+        <span style="font-size: 0.75rem; color: #cbd5e1;">हिन्दी / English</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. Sticky Header & Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="/" class="brand-wrapper">
+        <img src="/icons/icon-192.svg" alt="Robot Ambulance Logo" class="brand-logo-img" />
+        <div>
+          <div class="brand-title">ROBOT AMBULANCE</div>
+          <div class="brand-sub">PATNA · BIHAR · SAVELIFE PARTNER</div>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#book">Book Ambulance</a></li>
+          <li><a href="#robot-tech">Robot Tech</a></li>
+          <li><a href="#hospitals">Patna Hospitals</a></li>
+          <li><a href="#fleet">Our Fleet</a></li>
+          <li><a href="#districts">Bihar Tariffs</a></li>
+        </ul>
+      </nav>
+
+      <a href="tel:+916122991088" class="btn-emergency-call">
+        <span>🚨</span>
+        <span>CALL NOW · 24/7</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- 3. Hero Section with Interactive Booking Widget (SaveLife Architecture) -->
+  <section class="hero-section" id="book">
+    <div class="hero-container">
+      
+      <!-- Left Column: Value Proposition & Impact Stats -->
+      <div class="hero-info">
+        <div class="location-badge">
+          <span>📍</span>
+          <span>Patna & Bihar 24/7 Rapid Response</span>
+        </div>
+
+        <h1 class="hero-heading">
+          24/7 Smart & <span class="highlight">Robot-Assisted</span> Emergency Ambulance Service in Patna
+        </h1>
+
+        <p class="hero-desc">
+          GPS-tracked ICU on wheels equipped with <strong>Automated Robotic CPR (Lucas 3)</strong>, German transport ventilators, and certified critical care paramedics. Guaranteed transparent pricing and rapid arrival across all Patna zones and Bihar districts.
+        </p>
+
+        <!-- Stats Pill Row -->
+        <div class="stats-pill-row">
+          <div class="stat-pill">
+            <span>⚡ Arrival ETA:</span>
+            <strong id="stat-avg-eta">11.2 Min</strong>
+          </div>
+          <div class="stat-pill">
+            <span>🚑 Patna Fleet:</span>
+            <strong id="stat-active-ambulances">48</strong>
+          </div>
+          <div class="stat-pill">
+            <span>❤️ Lives Saved:</span>
+            <strong id="stat-lives-saved">18,450+</strong>
+          </div>
+        </div>
+
+        <div style="background: white; border-radius: var(--radius-md); padding: 1rem; border: 1px solid var(--border-color); display: flex; align-items: center; gap: 0.75rem; margin-top: 0.5rem;">
+          <span style="font-size: 2rem;">🤖</span>
+          <div style="font-size: 0.85rem; color: #475569;">
+            <strong style="color: var(--dark-navy);">Robot Continuous CPR Technology:</strong><br />
+            Our ALS fleet features mechanical automated chest compression maintaining vital blood circulation to brain and heart during critical transit to AIIMS/PMCH.
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Instant Booking Card (SaveLife Engine) -->
+      <div class="booking-card">
+        <div class="booking-card-header">
+          <div class="booking-tagline">Fast • Safe • Reliable</div>
+          <h2 class="booking-title">Book Ambulance Instantly</h2>
+          <p style="font-size: 0.8rem; color: #64748b;">Instant nearest vehicle dispatch with zero surge pricing</p>
+        </div>
+
+        <!-- 1. Pickup Location Input -->
+        <div class="form-group-booking">
+          <label>
+            <span>📍 Pickup Location in Patna</span>
+            <button type="button" id="btn-gps-detect" class="btn-gps-detect">🎯 Auto-Detect GPS</button>
+          </label>
+          <select id="pickup-select">
+            <option value="Bailey Road / Raja Bazar">Bailey Road / Raja Bazar (Near Paras & IGIMS)</option>
+            <option value="Boring Road / Boring Canal Road">Boring Road / Boring Canal Road</option>
+            <option value="Kankarbagh / Doctors Colony">Kankarbagh / Doctors Colony (Near Mediversal)</option>
+            <option value="Danapur / Saguna More">Danapur / Saguna More / Khagaul</option>
+            <option value="Gandhi Maidan / Exhibition Road">Gandhi Maidan / Exhibition Road / Fraser Road</option>
+            <option value="Patna Junction / Station Road">Patna Junction / Station Area</option>
+            <option value="Phulwari Sharif / Anisabad">Phulwari Sharif / Anisabad (Near AIIMS)</option>
+            <option value="Digha / Patliputra / Kurji">Digha / Patliputra Colony / Kurji</option>
+            <option value="Rajendra Nagar / Kumhrar">Rajendra Nagar / Kumhrar / Bahadurpur</option>
+            <option value="Patna City / Chowk / Marufganj">Patna City / Chowk / Mangal Talab</option>
+          </select>
+          <div id="gps-status-indicator" style="font-size: 0.7rem; color: var(--accent-blue); margin-top: 0.2rem;"></div>
+        </div>
+
+        <!-- 2. Destination Hospital Input -->
+        <div class="form-group-booking">
+          <label>
+            <span>🏥 Destination Hospital in Patna</span>
+          </label>
+          <select id="drop-hospital-select">
+            <!-- Dynamically populated from patna_hospitals.json -->
+          </select>
+        </div>
+
+        <!-- 3. Ambulance Type Selector (SaveLife Style Horizontal Pills) -->
+        <div class="form-group-booking" style="margin-bottom: 0.5rem;">
+          <label>
+            <span>🚑 Select Ambulance Fleet Type</span>
+          </label>
+          <div class="ambulance-type-selector" id="ambulance-selector-grid">
+            <!-- Dynamically generated vehicle cards -->
+          </div>
+        </div>
+
+        <!-- 4. Dynamic Fare & Dispatch Live Estimate Box -->
+        <div class="fare-summary-box">
+          <div class="fare-row-header">
+            <div>
+              <div class="fare-total-label">Upfront Estimated Fare</div>
+              <div style="font-size: 0.75rem; color: #15803d;">✓ Zero Surge Guarantee · Includes Driver & EMT</div>
+            </div>
+            <div class="fare-total-val" id="display-total-fare">₹3,999</div>
+          </div>
+
+          <div class="fare-details-grid">
+            <div>Distance: <strong id="display-distance">8 km</strong></div>
+            <div>Arrival ETA: <strong id="display-eta">11 mins</strong></div>
+            <div>Vehicle: <span id="display-vehicle-badge" style="font-weight:700;">🫁 ALS ICU</span></div>
+            <div>Nearest Hub: <span id="display-assigned-hub" style="font-weight:700;">Bailey Road Station</span></div>
+          </div>
+          <div style="font-size: 0.7rem; color: #4b5563; margin-top: 0.4rem;" id="display-base-fare-info"></div>
+        </div>
+
+        <!-- Booking Call To Action -->
+        <button type="button" id="btn-trigger-book-modal" class="btn-book-instant">
+          <span>🚨 Confirm & Dispatch Ambulance</span>
+          <span>→</span>
+        </button>
+
+        <div style="text-align: center; margin-top: 0.75rem; font-size: 0.8rem; color: #64748b;">
+          Or call Patna 24/7 Helpline directly: <a href="tel:+916122991088" style="color: var(--primary-red); font-weight: 800; text-decoration: none;">+91 612 299 1088</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. 1-Tap Emergency SOS Banner -->
+  <section class="sos-strip">
+    <div class="sos-container">
+      <div class="sos-text">
+        <h3>⚡ Critical Medical Emergency? Need Immediate Dispatch?</h3>
+        <p>Trigger 1-Tap SOS to alert our Patna Rapid Trauma Dispatch Center with top priority.</p>
+      </div>
+      <button type="button" id="btn-sos-trigger" class="btn-sos-trigger">
+        <span>🆘</span>
+        <span>TRIGGER 1-TAP SOS</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- 5. Robot Ambulance Bihar: Technology & Differentiators -->
+  <section class="section-wrapper" id="robot-tech">
+    <div class="section-head">
+      <span class="section-badge">Next-Generation Life Support</span>
+      <h2 class="section-heading">Why Choose Robot Ambulance Bihar?</h2>
+      <p class="section-desc">
+        We have upgraded traditional ambulances with advanced robotic medical automation and telematics, giving critical patients the highest survival chances during Patna's Golden Hour.
+      </p>
+    </div>
+
+    <div class="tech-grid">
+      <!-- Card 1: Robotic CPR -->
+      <div class="tech-card">
+        <div class="tech-icon-wrap">🤖</div>
+        <h3 class="tech-title">Automated Robotic Mechanical CPR</h3>
+        <p class="tech-desc">
+          Manual chest compressions suffer from fatigue on bumpy roads. Our Lucas-style robotic chest compressor delivers uncompromised 102 compressions/min at exact depth throughout transit to AIIMS Patna.
+        </p>
+      </div>
+
+      <!-- Card 2: 5G Tele-ICU Streaming -->
+      <div class="tech-card">
+        <div class="tech-icon-wrap">📡</div>
+        <h3 class="tech-title">Live Tele-ICU Vitals to Receiving ER</h3>
+        <p class="tech-desc">
+          12-lead ECG, blood pressure, oxygen saturation, and capnography are streamed live to the receiving trauma team at PMCH, IGIMS, or Paras, so the Cath Lab or OT is prepped before arrival.
+        </p>
+      </div>
+
+      <!-- Card 3: AI Smart City Corridor -->
+      <div class="tech-card">
+        <div class="tech-icon-wrap">🚦</div>
+        <h3 class="tech-title">AI Green-Corridor Traffic Routing</h3>
+        <p class="tech-desc">
+          Patna traffic can be daunting. Our GPS AI engine routes drivers via Ganga Marine Drive and Elevated Expressways, coordinating with local traffic control for unobstructed emergency passage.
+        </p>
+      </div>
+
+      <!-- Card 4: Transparent Pricing -->
+      <div class="tech-card">
+        <div class="tech-icon-wrap">💰</div>
+        <h3 class="tech-title">Zero Surge Transparent Pricing</h3>
+        <p class="tech-desc">
+          No haggling or exploitation during medical emergencies. You get clear upfront distance-based tariffs, digital receipts, GST invoices, and cashless digital payment options.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Patna Premier Hospitals Network -->
+  <section class="section-wrapper" id="hospitals" style="background: white; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="section-head">
+      <span class="section-badge">Connected Emergency Network</span>
+      <h2 class="section-heading">Patna Premier Hospital Tie-Ups</h2>
+      <p class="section-desc">
+        Direct coordination with Patna's leading government institutions and super-specialty hospitals for swift bedside handover.
+      </p>
+    </div>
+
+    <div class="hospitals-grid" id="hospitals-grid">
+      <!-- Dynamically rendered from patna_hospitals.json -->
+    </div>
+  </section>
+
+  <!-- 7. Fleet & Equipment Showcase -->
+  <section class="section-wrapper" id="fleet">
+    <div class="section-head">
+      <span class="section-badge">Advanced Medical Vehicles</span>
+      <h2 class="section-heading">Our Specialized Ambulance Fleet</h2>
+      <p class="section-desc">
+        From basic patient transfers to flying air ICUs, we operate the most technically advanced medical transport fleet in Eastern India.
+      </p>
+    </div>
+
+    <div class="tech-grid" id="fleet-showcase-grid">
+      <!-- Dynamically rendered from fleet.json -->
+    </div>
+  </section>
+
+  <!-- 8. All 38 Districts of Bihar Intercity Tariffs -->
+  <section class="section-wrapper" id="districts">
+    <div class="section-head">
+      <span class="section-badge">Pan-Bihar Coverage</span>
+      <h2 class="section-heading">Inter-District Transfer Fares (All 38 Districts)</h2>
+      <p class="section-desc">
+        Need patient shifting from Patna to Gaya, Muzaffarpur, Darbhanga, Bhagalpur, or Purnia? Check transparent fixed intercity rates.
+      </p>
+      <div style="margin-top: 1.25rem;">
+        <input type="text" id="district-search-input" placeholder="🔍 Search district (e.g. Gaya, Darbhanga, Bhagalpur)..." style="max-width: 420px; width: 100%; padding: 0.65rem 1rem; border: 1.5px solid var(--border-color); border-radius: var(--radius-full); font-size: 0.9rem; outline: none;" />
+      </div>
+    </div>
+
+    <div class="table-responsive">
+      <table class="districts-table">
+        <thead>
+          <tr>
+            <th>District / Destination</th>
+            <th>Distance</th>
+            <th>Est. Transit Time</th>
+            <th>Primary Highway Route</th>
+            <th>BLS Transfer Rate</th>
+            <th>ALS ICU Transfer Rate</th>
+          </tr>
+        </thead>
+        <tbody id="districts-table-body">
+          <!-- Dynamically populated from bihar_districts.json -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 9. Customer Testimonials from Patna -->
+  <section class="section-wrapper" style="background: white; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="section-head">
+      <span class="section-badge">Trusted by Families</span>
+      <h2 class="section-heading">Stories of Care & Survival in Patna</h2>
+      <p class="section-desc">Real accounts from patients, families, and doctors across Bihar who relied on Robot Ambulance.</p>
+    </div>
+
+    <div class="tech-grid">
+      <div class="tech-card">
+        <div style="color: #f59e0b; margin-bottom: 0.5rem;">★★★★★</div>
+        <p style="font-size: 0.9rem; color: #334155; line-height: 1.6; margin-bottom: 1rem;">
+          "My father had a sudden cardiac arrest at our home in Kankarbagh at 2:00 AM. The Robot Ambulance arrived in exactly 9 minutes with the automated CPR machine. The paramedic connected to AIIMS ER on video call. They saved his life."
+        </p>
+        <div style="font-weight: 800; color: var(--dark-navy);">— Dr. Alok Ranjan Sinha</div>
+        <div style="font-size: 0.75rem; color: #64748b;">Kankarbagh, Patna</div>
+      </div>
+
+      <div class="tech-card">
+        <div style="color: #f59e0b; margin-bottom: 0.5rem;">★★★★★</div>
+        <p style="font-size: 0.9rem; color: #334155; line-height: 1.6; margin-bottom: 1rem;">
+          "We needed urgent ICU transfer of my mother on ventilator from Darbhanga to Paras HMRI Patna. The ALS Traveller was spotless, the German ventilator ran continuously without a hiccup, and the nurse was remarkably attentive."
+        </p>
+        <div style="font-weight: 800; color: var(--dark-navy);">— Neha Kumari</div>
+        <div style="font-size: 0.75rem; color: #64748b;">Darbhanga to Patna Transfer</div>
+      </div>
+
+      <div class="tech-card">
+        <div style="color: #f59e0b; margin-bottom: 0.5rem;">★★★★★</div>
+        <p style="font-size: 0.9rem; color: #334155; line-height: 1.6; margin-bottom: 1rem;">
+          "What sets this service apart in Patna is transparent pricing. No driver haggling for ₹10,000 extra outside hospital gates. Upfront bill, GST invoice, and proper courteous staff."
+        </p>
+        <div style="font-weight: 800; color: var(--dark-navy);">— Vikramaditya Singh</div>
+        <div style="font-size: 0.75rem; color: #64748b;">Boring Road, Patna</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Frequently Asked Questions -->
+  <section class="section-wrapper">
+    <div class="section-head">
+      <span class="section-badge">Got Questions?</span>
+      <h2 class="section-heading">Frequently Asked Questions</h2>
+    </div>
+
+    <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
+      <details style="background: white; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);" open>
+        <summary style="font-weight: 800; cursor: pointer; color: var(--dark-navy);">How fast can an ambulance reach my location in Patna?</summary>
+        <p style="margin-top: 0.5rem; color: #475569; font-size: 0.9rem;">
+          Our vehicles are positioned across 6 dedicated rapid-response stations in Patna (Bailey Road, Kankarbagh, Danapur/Saguna More, Ashok Rajpath, Phulwari Sharif, and Gandhi Maidan). Average arrival time is 8 to 14 minutes.
+        </p>
+      </details>
+
+      <details style="background: white; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+        <summary style="font-weight: 800; cursor: pointer; color: var(--dark-navy);">What is the difference between BLS and ALS ICU ambulances?</summary>
+        <p style="margin-top: 0.5rem; color: #475569; font-size: 0.9rem;">
+          BLS (Basic Life Support) is ideal for stable patients, providing oxygen, stretcher, and EMT care. ALS (Advanced Life Support) is a mobile ICU with a ventilator, robotic CPR compressor, defibrillator, cardiac monitors, and ICU nurse for critical, intubated, or cardiac emergencies.
+        </p>
+      </details>
+
+      <details style="background: white; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+        <summary style="font-weight: 800; cursor: pointer; color: var(--dark-navy);">Do you provide air ambulance transfer from Patna to Delhi?</summary>
+        <p style="margin-top: 0.5rem; color: #475569; font-size: 0.9rem;">
+          Yes. We arrange bedside-to-bedside air transfers from Patna Airport (Jai Prakash Narayan International) to Delhi (AIIMS / Medanta / Apollo), Kolkata, and Mumbai with specialized aero-medical doctors and flight ventilators.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- 11. Footer & Statutory Notice -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4 style="color: var(--primary-red); font-size: 1.2rem; font-weight: 900;">ROBOT AMBULANCE BIHAR</h4>
+        <p style="margin-bottom: 1rem; line-height: 1.6;">
+          Patna's premier smart emergency medical transport provider and partner of SaveLife Health Services. Delivering rapid, dignified, and mathematically optimized life support across Bihar.
+        </p>
+        <p><strong>Patna Central Control Room:</strong><br />Bailey Road, Near Saguna More, Danapur, Patna - 801503, Bihar</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Emergency Ambulances</h4>
+        <ul>
+          <li><a href="#book">BLS Ambulance (Eeco)</a></li>
+          <li><a href="#book">BLS Ambulance (Traveller)</a></li>
+          <li><a href="#book">ALS Robotic ICU on Wheels</a></li>
+          <li><a href="#book">ACLS Cardiac Life Support</a></li>
+          <li><a href="#book">NICU / PICU Baby Transport</a></li>
+          <li><a href="#book">Mortuary Van & Freezer Box</a></li>
+          <li><a href="#book">Air Ambulance Services</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Patna Hospitals</h4>
+        <ul>
+          <li><a href="#hospitals">AIIMS Patna Trauma</a></li>
+          <li><a href="#hospitals">PMCH Emergency</a></li>
+          <li><a href="#hospitals">IGIMS Sheikhpura</a></li>
+          <li><a href="#hospitals">Paras HMRI Raja Bazar</a></li>
+          <li><a href="#hospitals">Ruban Memorial Hospital</a></li>
+          <li><a href="#hospitals">Mediversal Kankarbagh</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>24/7 Dispatch Helplines</h4>
+        <p style="margin-bottom: 0.5rem;"><strong>Emergency Control:</strong><br /><a href="tel:+916122991088" style="color: #fca5a5; font-size: 1.1rem; font-weight: 800; text-decoration: none;">+91 612 299 1088</a></p>
+        <p style="margin-bottom: 0.5rem;"><strong>Mobile Dispatch:</strong><br /><a href="tel:+919122010808" style="color: #fca5a5; font-size: 1.1rem; font-weight: 800; text-decoration: none;">+91 91220 10808</a></p>
+        <p style="margin-top: 1rem;"><strong>WhatsApp:</strong> +91 91220 10808</p>
+        <p><strong>Email:</strong> emergency@robotambulancebihar.in</p>
+      </div>
+    </div>
+
+    <div class="footer-disclaimer-box">
+      <strong>⚠️ Statutory Medical Notice:</strong> Robot Ambulance Bihar operates as a specialized private emergency medical transport provider and SaveLife Health partner. It is not affiliated with the government 108/112 emergency service. For free government ambulance services in Bihar, dial 108. For law enforcement, dial 112. In acute life-threatening situations, call our dispatch line immediately.
+    </div>
+  </footer>
+
+  <!-- 12. Floating Mobile Emergency Speed Dial -->
+  <div class="floating-emergency-bar">
+    <a href="tel:+916122991088" class="btn-float-call">
+      <span>🚨</span>
+      <span>CALL 24/7 (PATNA)</span>
+    </a>
+    <a href="https://wa.me/919122010808?text=Emergency%20Ambulance%20Needed%20in%20Patna" class="btn-float-whatsapp" target="_blank">
+      <span>💬</span>
+      <span>WHATSAPP</span>
+    </a>
+  </div>
+
+  <!-- 13. Modal: Emergency Booking Confirmation -->
+  <div id="booking-modal" class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-header-live">
+        <h3 style="font-size: 1.15rem; font-weight: 800;">🚨 Confirm Emergency Ambulance Dispatch</h3>
+        <button class="btn-gps-detect" style="color: white; font-size: 1.25rem;" data-close-modal>✕</button>
+      </div>
+      <div class="modal-body">
+        <div style="background: #fef2f2; border: 1px solid #fecaca; padding: 0.75rem; border-radius: 8px; margin-bottom: 1rem; font-size: 0.85rem; color: #991b1b;">
+          Selected: <strong id="modal-amb-summary">ALS Robotic ICU</strong>
+        </div>
+        <form id="emergency-booking-form">
+          <div class="form-group-booking">
+            <label>Caller / Attendant Name *</label>
+            <input type="text" id="book-caller-name" required placeholder="e.g. Rahul Sharma" />
+          </div>
+          <div class="form-group-booking">
+            <label>Patient Contact Phone Number *</label>
+            <input type="tel" id="book-phone" required placeholder="e.g. +91 98765 43210" />
+          </div>
+          <div class="form-group-booking">
+            <label>Exact Pickup Address / Landmark in Patna *</label>
+            <input type="text" id="modal-pickup-input" required placeholder="e.g. Flat 302, Ashiana Nagar, Bailey Road" />
+          </div>
+          <div class="form-group-booking">
+            <label>Patient Condition / Chief Complaint</label>
+            <select id="book-patient-condition">
+              <option value="Cardiac Chest Pain / Heart Attack">Cardiac Chest Pain / Heart Attack</option>
+              <option value="Severe Breathlessness / O2 Drop">Severe Breathlessness / O2 Drop</option>
+              <option value="Road Accident / Polytrauma">Road Accident / Polytrauma</option>
+              <option value="Acute Stroke / Paralysis">Acute Stroke / Paralysis</option>
+              <option value="Unconscious / Non-Responsive">Unconscious / Non-Responsive</option>
+              <option value="Routine Hospital Transfer">Routine Hospital Transfer</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-book-instant" style="margin-top: 1rem;">
+            <span>🚨 Dispatch Nearest Unit Now</span>
+            <span>✓</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 14. Modal: Live GPS Radar & Tracking -->
+  <div id="tracking-modal" class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-header-live" style="background: #15803d;">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <span style="font-size: 1.5rem;">🚑</span>
+          <div>
+            <h3 style="font-size: 1.1rem; font-weight: 800;">Ambulance Dispatched & En Route</h3>
+            <span style="font-size: 0.75rem; color: #dcfce7;">Patna Smart City Emergency Dispatch Network</span>
+          </div>
+        </div>
+        <button class="btn-gps-detect" style="color: white; font-size: 1.25rem;" data-close-modal>✕</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Animated Radar Screen Simulation -->
+        <div class="radar-map-sim">
+          <div class="radar-sweep"></div>
+          <div style="position: absolute; color: #64748b; font-size: 0.7rem; top: 10px; left: 10px;">
+            PATNA GPS RADAR · CORRIDOR LIVE
+          </div>
+          <div class="pulse-marker-ambulance" title="Ambulance Moving">🚑</div>
+          <div class="pulse-marker-pickup" title="Your Pickup Location">📍</div>
+          <div style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.6); padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem; color: #4ade80;">
+            ● 5G Tele-ICU Stream: ACTIVE
+          </div>
+        </div>
+
+        <!-- Driver & Vehicle Card -->
+        <div style="background: #f8fafc; border: 1px solid var(--border-color); border-radius: 12px; padding: 1rem; margin-bottom: 1rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <div>
+              <div style="font-size: 0.75rem; color: #64748b;">Assigned Driver / Paramedic</div>
+              <strong style="font-size: 1.05rem; color: var(--dark-navy);" id="track-driver-name">Rajesh Kumar Yadav</strong>
+            </div>
+            <a id="track-driver-call-link" href="tel:+919122010811" class="btn-emergency-call" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">
+              <span>📞</span> Call Driver
+            </a>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.85rem; border-top: 1px solid #e2e8f0; padding-top: 0.5rem;">
+            <div>Vehicle No: <strong id="track-vehicle-num" style="color: var(--primary-red);">BR 01 PB 1088</strong></div>
+            <div>Pickup OTP: <strong id="track-otp" style="color: #15803d; font-size: 1.1rem;">4892</strong></div>
+            <div>Driver Phone: <span id="track-driver-phone">+91 91220 10811</span></div>
+            <div>Estimated Arrival: <strong id="track-eta" style="color: var(--primary-red);">11 Mins</strong></div>
+          </div>
+        </div>
+
+        <div style="background: #ecfdf5; border: 1px solid #a7f3d0; padding: 0.75rem; border-radius: 8px; font-size: 0.8rem; color: #065f46; display: flex; align-items: center; gap: 0.5rem;">
+          <span>✓</span>
+          <span>Emergency team notified. Keep your phone line reachable. Ambulance pilot is navigating via Patna Express corridor.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/js/app.js"></script>
+</body>
+</html>

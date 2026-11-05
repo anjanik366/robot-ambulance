@@ -1,0 +1,26 @@
+{
+  "name": "robot-ambulance-bihar",
+  "version": "1.0.0",
+  "description": "24/7 Smart & Robot-Assisted Emergency Ambulance Service for Patna and Bihar - SaveLife Partner",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "keywords": [
+    "ambulance",
+    "robot-ambulance",
+    "patna",
+    "bihar",
+    "emergency-medical-services",
+    "icu-ambulance",
+    "savelife"
+  ],
+  "author": "Robot Ambulance Bihar",
+  "license": "MIT"
+}
