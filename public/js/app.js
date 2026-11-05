@@ -60,9 +60,12 @@ const RobotAmbulance = {
       const res = await fetch('/api/stats');
       const data = await res.json();
       const s = data.stats;
-      document.getElementById('stat-active-ambulances').textContent = s.activeAmbulancesInPatna;
-      document.getElementById('stat-avg-eta').textContent = `${s.avgResponseTimeMins} Min`;
-      document.getElementById('stat-lives-saved').textContent = `${s.criticalLivesSavedBihar.toLocaleString('en-IN')}+`;
+      const el1 = document.getElementById('stat-active-ambulances');
+      const el2 = document.getElementById('stat-avg-eta');
+      const el3 = document.getElementById('stat-lives-saved');
+      if (el1) el1.textContent = s.activeAmbulancesInPatna;
+      if (el2) el2.textContent = `${s.avgResponseTimeMins} Min`;
+      if (el3) el3.textContent = `${s.criticalLivesSavedBihar.toLocaleString('en-IN')}+`;
     } catch (e) {
       console.error('Failed to load stats', e);
     }
@@ -183,12 +186,19 @@ const RobotAmbulance = {
       const v = data.vehicle;
       const h = data.hospital;
 
-      document.getElementById('display-total-fare').textContent = `₹${fb.totalEstimatedFare.toLocaleString('en-IN')}`;
-      document.getElementById('display-distance').textContent = `${re.distanceKm} km`;
-      document.getElementById('display-eta').textContent = `${re.etaMinutes} mins`;
-      document.getElementById('display-assigned-hub').textContent = re.assignedHub;
-      document.getElementById('display-vehicle-badge').textContent = `${v.icon} ${v.name}`;
-      document.getElementById('display-base-fare-info').textContent = `₹${fb.baseFare} (first ${fb.baseCoveredKm} km included) + ₹${fb.perExtraKmRate}/km extra`;
+      const elFare = document.getElementById('display-total-fare');
+      const elDist = document.getElementById('display-distance');
+      const elEta = document.getElementById('display-eta');
+      const elHub = document.getElementById('display-assigned-hub');
+      const elBadge = document.getElementById('display-vehicle-badge');
+      const elInfo = document.getElementById('display-base-fare-info');
+
+      if (elFare) elFare.textContent = `₹${fb.totalEstimatedFare.toLocaleString('en-IN')}`;
+      if (elDist) elDist.textContent = `${re.distanceKm} km`;
+      if (elEta) elEta.textContent = `${re.etaMinutes} mins`;
+      if (elHub) elHub.textContent = re.assignedHub;
+      if (elBadge) elBadge.textContent = `${v.icon} ${v.name}`;
+      if (elInfo) elInfo.textContent = `₹${fb.baseFare} (first ${fb.baseCoveredKm} km included) + ₹${fb.perExtraKmRate}/km extra`;
     } catch (e) {
       console.error('Fare calc error', e);
     }

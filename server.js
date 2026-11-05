@@ -9,7 +9,20 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+
+// Request logging and cache-busting
+app.use((req, res, next) => {
+  res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+  if (!req.url.startsWith('/icons/')) {
+    console.log(`[${new Date().toLocaleTimeString()}] ${req.method} ${req.url}`);
+  }
+  next();
+});
+
+app.use(express.static(path.join(__dirname, 'public'), {
+  etag: false,
+  maxAge: 0
+}));
 
 // Data file paths
 const DATA_DIR = path.join(__dirname, 'data');
@@ -282,14 +295,24 @@ app.get('*', (req, res) => {
 });
 
 if (process.env.NODE_ENV !== 'test') {
-  app.listen(PORT, '0.0.0.0', () => {
+  const ALT_PORT = 3001;
+
+  app.listen(PORT, () => {
     console.log(`====================================================`);
     console.log(`🚨 ROBOT AMBULANCE BIHAR — PATNA EMERGENCY DISPATCH`);
-    console.log(`🌐 Live Portal:      http://localhost:${PORT}`);
+    console.log(`🌐 Primary Portal:   http://localhost:${PORT}`);
+    console.log(`🌐 Clean Port:       http://localhost:${ALT_PORT}`);
     console.log(`📞 24/7 Helpline:    +91 612 299 1088 / +91 91220 10808`);
     console.log(`📍 City & State:     Patna, Bihar (All 38 Districts)`);
     console.log(`====================================================`);
   });
+
+  // Also bind to port 3001 to bypass any old Service Worker caches on 3000
+  try {
+    app.listen(ALT_PORT);
+  } catch (e) {
+    // Port 3001 optional
+  }
 }
 
 module.exports = app;
