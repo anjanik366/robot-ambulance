@@ -2,7 +2,7 @@
   {
     "id": "R-AMB-413036-734",
     "callerName": "Sunil Kumar",
-    "phone": "+91 91220 10899",
+    "phone": "+91 2444666667",
     "pickupAddress": "Road No 4, Rajendra Nagar, Patna",
     "dropHospitalName": "PMCH Super Emergency Wing",
     "ambulanceType": "ALS — Robotic ICU on Wheels",
@@ -13,7 +13,7 @@
     "pickupOtp": 4764,
     "assignedDriver": {
       "name": "Rajesh Kumar Yadav",
-      "phone": "+91 91220 10811",
+      "phone": "+91 2444666667",
       "emtBadge": "BR-EMT-402",
       "vehicleNumber": "BR 01 PB 5257",
       "model": "Force Traveller 3350 High Roof ICU"

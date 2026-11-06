@@ -265,7 +265,7 @@ const RobotAmbulance = {
       document.getElementById('booking-modal')?.classList.remove('active');
       this.openTrackingModal(data.booking);
     } catch (err) {
-      alert(err.message || 'Error booking ambulance. Please dial +91 612 299 1088 directly.');
+      alert(err.message || 'Error booking ambulance. Please dial +91 2444666667 directly.');
     }
   },
 
@@ -306,13 +306,13 @@ const RobotAmbulance = {
       const res = await fetch('/api/emergency-sos', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ phone: '+919122010808' })
+        body: JSON.stringify({ phone: '+912444666667' })
       });
       const data = await res.json();
       alert(`🚨 ${data.message}\nDispatch Code: ${data.sosId}\nResponse ETA: ${data.eta}\nControl room helpline: ${data.helplineNumbers.join(' / ')}`);
       window.location.href = `tel:${data.helplineNumbers[0].replace(/[^0-9+]/g, '')}`;
     } catch (e) {
-      window.location.href = 'tel:+916122991088';
+      window.location.href = 'tel:+912444666667';
     }
   },
 

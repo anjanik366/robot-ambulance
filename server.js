@@ -80,7 +80,7 @@ app.get('/api/health', (req, res) => {
     service: 'Robot Ambulance Bihar & Patna Emergency Dispatch Core',
     city: 'Patna',
     state: 'Bihar',
-    helpline: '+91 612 299 1088',
+    helpline: '+91 2444666667',
     timestamp: new Date().toISOString()
   });
 });
@@ -196,10 +196,10 @@ app.post('/api/book-ambulance', (req, res) => {
 
     // Generate realistic Patna emergency driver and vehicle allocation
     const patnaDrivers = [
-      { name: "Rajesh Kumar Yadav", phone: "+91 91220 10811", badge: "BR-EMT-402" },
-      { name: "Suresh Prasad Singh", phone: "+91 91220 10822", badge: "BR-EMT-509" },
-      { name: "Amitabh Sen", phone: "+91 91220 10833", badge: "BR-EMT-118" },
-      { name: "Santosh Choubey", phone: "+91 91220 10844", badge: "BR-EMT-774" }
+      { name: "Rajesh Kumar Yadav", phone: "+91 2444666667", badge: "BR-EMT-402" },
+      { name: "Suresh Prasad Singh", phone: "+91 2444666667", badge: "BR-EMT-509" },
+      { name: "Amitabh Sen", phone: "+91 2444666667", badge: "BR-EMT-118" },
+      { name: "Santosh Choubey", phone: "+91 2444666667", badge: "BR-EMT-774" }
     ];
     const assignedDriver = patnaDrivers[Math.floor(Math.random() * patnaDrivers.length)];
     const vehicleRegNumber = `BR 01 PB ${Math.floor(Math.random() * 8999 + 1000)}`;
@@ -245,7 +245,7 @@ app.post('/api/book-ambulance', (req, res) => {
     });
   } catch (err) {
     console.error('Booking error:', err);
-    res.status(500).json({ success: false, message: 'Emergency dispatch error. Please call +91 612 299 1088 immediately.' });
+    res.status(500).json({ success: false, message: 'Emergency dispatch error. Please call +91 2444666667 immediately.' });
   }
 });
 
@@ -268,7 +268,7 @@ app.post('/api/emergency-sos', (req, res) => {
     success: true,
     message: 'CRITICAL PRIORITY: High alert dispatched to Patna Emergency Control Room.',
     sosId,
-    helplineNumbers: ['+91 612 299 1088', '+91 91220 10808'],
+    helplineNumbers: ['+91 2444666667'],
     eta: '6-9 Minutes',
     action: 'Dispatch team is calling your phone now.'
   });
@@ -301,7 +301,7 @@ if (process.env.NODE_ENV !== 'test') {
     console.log(`====================================================`);
     console.log(`🚨 ROBOT AMBULANCE BIHAR — PATNA EMERGENCY DISPATCH`);
     console.log(`🌐 Primary Portal:   http://localhost:${PORT}`);
-    console.log(`📞 24/7 Helpline:    +91 612 299 1088 / +91 91220 10808`);
+    console.log(`📞 24/7 Helpline:    +91 2444666667`);
     console.log(`📍 City & State:     Patna, Bihar (All 38 Districts)`);
     console.log(`====================================================`);
   });

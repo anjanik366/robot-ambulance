@@ -103,7 +103,7 @@ async function runTests() {
     console.log('6. Testing /api/book-ambulance...');
     const bookRes = await request('POST', '/api/book-ambulance', {
       callerName: 'Sunil Kumar',
-      phone: '+91 91220 10899',
+      phone: '+91 2444666667',
       pickupAddress: 'Road No 4, Rajendra Nagar, Patna',
       dropHospitalName: 'PMCH Super Emergency Wing',
       ambulanceType: 'ALS_ROBOTIC',
@@ -125,7 +125,7 @@ async function runTests() {
 
     // 8. 1-Tap SOS Dispatch
     console.log('8. Testing /api/emergency-sos...');
-    const sosRes = await request('POST', '/api/emergency-sos', { phone: '+91 91220 10808' });
+    const sosRes = await request('POST', '/api/emergency-sos', { phone: '+91 2444666667' });
     if (sosRes.status !== 200 || !sosRes.data.sosId) {
       throw new Error(`SOS dispatch failed: ${JSON.stringify(sosRes)}`);
     }
