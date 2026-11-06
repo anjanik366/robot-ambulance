@@ -297,21 +297,27 @@ app.get('*', (req, res) => {
 if (process.env.NODE_ENV !== 'test') {
   const ALT_PORT = 3001;
 
-  app.listen(PORT, () => {
+  app.listen(PORT, '0.0.0.0', () => {
     console.log(`====================================================`);
     console.log(`🚨 ROBOT AMBULANCE BIHAR — PATNA EMERGENCY DISPATCH`);
     console.log(`🌐 Primary Portal:   http://localhost:${PORT}`);
-    console.log(`🌐 Clean Port:       http://localhost:${ALT_PORT}`);
     console.log(`📞 24/7 Helpline:    +91 612 299 1088 / +91 91220 10808`);
     console.log(`📍 City & State:     Patna, Bihar (All 38 Districts)`);
     console.log(`====================================================`);
   });
 
-  // Also bind to port 3001 to bypass any old Service Worker caches on 3000
-  try {
-    app.listen(ALT_PORT);
-  } catch (e) {
-    // Port 3001 optional
+  // In local development, also bind to port 3001 to bypass any old Service Worker caches on 3000
+  if (!process.env.RENDER && process.env.NODE_ENV !== 'production') {
+    try {
+      const altServer = app.listen(ALT_PORT, '0.0.0.0', () => {
+        console.log(`🌐 Local Alt Port:   http://localhost:${ALT_PORT}`);
+      });
+      altServer.on('error', () => {
+        // Port 3001 in use, safely ignored in dev
+      });
+    } catch (e) {
+      // Port 3001 optional
+    }
   }
 }
 
